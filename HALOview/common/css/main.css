@@ -1,0 +1,290 @@
+/*13 Sep 2011*/
+/************************************************/
+/*MAIN BODY*/
+/*The content area is fixed width at 960px with */
+/* 15px padding so its 990px to match the brand.*/
+/*Colors used are:*/
+/*Lagoon:#384983 - main background*/
+/*Lagoon Light:#B1C3D4 - highlighted sub regions*/
+/*padding is generally 15px*/
+/*border-radius is generally 10px*/
+/************************************************/
+body
+{
+    /*Brand rules*/
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    line-height: 20px;
+    background-color:#384983; /*Lagoon brand*/
+    color:#333333;
+    
+    /*Get rid of those annoying inconsistent gaps around the edges*/
+    width:100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    /*Brand rule*/
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+h2
+{
+    font-size:19px;
+}
+
+p
+{
+
+}
+
+/*Keep the links the same color, even if already visited */
+a:link
+{
+    color:#0088AA;
+    text-decoration:none;
+}   
+
+a:visited
+{
+    color:#0088AA;
+    text-decoration:none;
+}
+
+a:hover
+{
+    color:#003366;
+    text-decoration:underline;
+}
+
+/*main content box*/
+div#content
+{
+    width:960px;
+    padding: 15px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+    
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+
+    overflow:auto;
+}
+
+/*Navigation*/
+div#navigation_container
+{
+    width:960px;
+
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+
+    background-color:#E8E8E8;
+
+    font-size:15px;
+    font-weight:bold;
+
+}
+
+a.nav:link
+{
+    color:black;
+}
+
+a.nav:visited
+{
+    color:black;
+}
+
+/*logo*/
+div#uni_logo
+{
+    padding: 10px;
+    overflow:auto;
+}
+
+/*HALOGEN title*/
+div#title
+{
+    width:994px;
+    color:white;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:right;
+    font-size:32px;
+    line-height:32px;
+}
+
+/*Footer*/
+div#footer
+{
+    width:990px;
+    margin-left:auto;
+    margin-right:auto;
+    clear:both;
+    text-align:right;
+}
+
+#whitelink
+{
+    color: white;
+    text-decoration:none;
+}
+
+div#left_column
+{
+    /*(960-15)/2*/
+    width:460px;
+    float:left;
+}
+
+div#right_column
+{
+    width:460px;
+    float:right;
+}
+
+div#map_container
+{
+    width:100%;
+    float:left;
+}
+
+div#copyright_container
+{
+    float:left;
+    padding:1em;
+}
+
+/**************************************
+Query pages
+**************************************/
+div#whole_query_container
+{
+    background-color:#B1C3D4;
+    width:430px; 
+    padding:15px;
+    border-radius:10px;
+}
+
+
+div.section_query_container
+{
+    background-color:white;
+    padding:15px;
+    border-radius:10px;
+    overflow:auto;
+}
+
+div.section_query_container_left
+{
+    width:45%;
+    float:left;
+}
+
+div.section_query_container_right
+{
+    width:50%;
+    float:right;
+}
+
+input, textarea
+{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+}
+
+.button
+{
+    border-color:grey;
+    border-style:outset;
+    border-width:2px;
+
+    border-radius:10px;
+
+    padding:5px;
+}
+
+/**************************************
+Results pages
+**************************************/
+div.metadata_container
+{
+    width:90%;
+    float:right;
+    background-color:#B1C3D4;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:2em; /*hack to make bottom one move away from top*/
+    overflow:auto;
+}
+
+table#summary
+{
+    /*background-color:red;*/
+    width:100%;
+    text-align:left;
+    border-collapse:collapse;
+}
+
+#summary td
+{
+    /*background-color:blue;*/
+    border:1px solid black;
+    padding-left:1em;
+    padding-right:1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+
+div#scale_bar
+{
+    width:100%;
+    height:1em; 
+
+    background-color: #444444;
+    background-image: -webkit-gradient(linear, left top, right top, from(#0000FF), to(#FF0000)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(left, #0000FF, #FF0000); /* Chrome 10+, Saf5.1+ */
+    background-image:    -moz-linear-gradient(left, #0000FF, #FF0000); /* FF3.6 */
+    background-image:     -ms-linear-gradient(left, #0000FF, #FF0000); /* IE10 */
+    background-image:      -o-linear-gradient(left, #0000FF, #FF0000); /* Opera 11.10+ */
+    background-image:         linear-gradient(left, #0000FF, #FF0000);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#0000FF', EndColorStr='#FF0000',GradientType=1); /* IE6–IE9 */
+
+
+}
+
+/*This is for the separate results list page*/
+table#stripy_table
+{
+    width:100%;
+    table-layout:fixed;
+    border:1px solid black;
+    border-collapse:collapse;
+}
+
+#stripy_table td, th
+{
+    border:1px solid black;
+
+    padding-left:1em;
+    padding-right:1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+#stripy_table tr:nth-of-type(even)
+{
+    background-color:#B1C3D4;
+}
